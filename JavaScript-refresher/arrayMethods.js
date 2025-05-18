@@ -148,3 +148,23 @@ const essentialData = books.map((book) => ({
 }));
 
 console.log(essentialData);
+
+const longBooks = books.filter((book) => book.pages > 500);
+console.log(longBooks);
+
+const adventureBooks = books
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => ({
+    title: book.title,
+    author: book.author,
+  }));
+
+console.log(adventureBooks);
+
+const sumOfPages = books.reduce((sum, book) => sum + book.pages, 0);
+console.log(`Sum of pages : ${sumOfPages}`);
+
+const arr = [2, 1, 7, 8, 9];
+const sortedArr = arr.slice().sort((a, b) => b - a);
+console.log(arr);
+console.log(sortedArr);
